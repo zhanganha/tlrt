@@ -1,0 +1,17 @@
+---
+cloud_controller_uri: http://api.cloudfoundry.test
+service:
+  name: tlrt
+  version: "8.0"
+  description: 'tlrt service'
+  plans: ['free']
+  tags: ['tlrt', 'tlrt-8.0', 'tlrt', 'tlrt']
+  timeout: 15
+host: 168.1.43.12
+index: 0
+token: changetlrttoken
+mbus: nats://nats:nats@168.1.42.168:4222/
+pid: /var/vcap/sys/run/tlrt_service.pid
+node_timeout: 5
+logging:
+  level: debug

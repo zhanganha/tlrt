@@ -1,0 +1,22 @@
+---
+capacity: 50
+plan: free
+local_db: sqlite3:/var/vcap/services/tlrt/tlrt_node.db
+mbus: nats://nats:nats@168.1.42.12:4222/
+index: 0
+base_dir: /var/vcap/services/tlrt/instances
+tlrt_log_dir: /var/vcap/services/tlrt/logs
+pid: /var/vcap/sys/run/tlrt_node.pid
+max_memory: 128
+node_id: tlrt_node_0
+op_time_limit: 6
+tlrt_path: /root/cloudfoundry/.deployments/devbox/deploy/TLRT/startup.sh
+tlrt_shutdown_path: /root/cloudfoundry/.deployments/devbox/deploy/TLRT/shutdown.sh
+store_path: /root/cloudfoundry/.deployments/devbox/deploy/tlrt/bin/tlrt
+tlrt_timeout: 2
+port_range:
+  first: 20000
+  last: 45000
+migration_nfs: /mnt/migration
+logging:
+  level: debug

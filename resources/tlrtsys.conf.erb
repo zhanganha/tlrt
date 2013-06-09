@@ -1,0 +1,33 @@
+[System]
+NodeName = <%= node_id %>
+LogSize = 10240
+LogFileNum = 5
+LocalQueMaxNum = 20
+[LocalQue]
+[LocalQueRecord]
+LocalQueName = lq0
+QueNum = 1
+Type = 1
+MsgNum = 10000
+QueSpaceSize = 400000
+[LocalQueRecord]
+LocalQueName = lq1
+QueNum = 1
+Type = 1
+MsgNum = 100000
+QueSpaceSize = 500000
+[LocalQueRecord]
+LocalQueName = MonitorStatus
+QueNum = 1
+Type = 1
+MsgNum = 100
+QueSpaceSize = 50000
+
+[ClientBroker]
+[ClientBrokerRecord]
+CliBrokerID = 1
+CliBrokerStatus = 1
+ListenPort = <%= port %>
+MaxThreadNum = 20
+ListenIp = 0.0.0.0
+WorkProcessNum = 0
